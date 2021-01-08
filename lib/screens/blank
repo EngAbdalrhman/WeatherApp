@@ -1,0 +1,28 @@
+    // LocationPermission mypermission = await Geolocator.checkPermission();
+    // LocationPermission permission = await Geolocator.requestPermission();
+    // permission = LocationPermission.always;
+    import 'dart:ffi';
+void getData() async {
+    
+  }
+  import 'package:http/http.dart' as http; = import 'package:http/http.dart';
+  //import 'location_screen.dart';
+api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$apiKey
+
+    http.Response response = await http.get(url);
+
+    var data = response.body;
+    var dataCode = jsonDecode(data);
+    
+        onPressed: () async {
+                      var name = await Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return CityScreen();
+                      }));
+                      if (name != null) {
+                        var wetherData = await weatherModel.getCity(name);
+                        updating(wetherData);
+                      }
+                    },
+        http://api.openweathermap.org/data/2.5/weather?q=cairo&appid=0533e55df784e373d8e76204e572ab66
+        api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey
